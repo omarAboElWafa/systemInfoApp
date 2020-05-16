@@ -1,0 +1,23 @@
+{
+  "name": "systeminfoapp",
+  "version": "1.0.0",
+  "description": "Simple system monitor",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Omar Abo El Wafa",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^8.3.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omarAboElWafa/systemInfoApp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/omarAboElWafa/systemInfoApp/issues"
+  },
+  "homepage": "https://github.com/omarAboElWafa/systemInfoApp#readme"
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SysInfoApp</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>System Information App</h1>
+      <div id="output">
+      </div>
+    </div>
+
+  </body>
+
+
+  <script type="text/javascript">
+  console.log(process);
+    let output = `
+    <h4 class="text-secondary">Versions Data</h4>
+    <ul class="list-group">
+      <li class="list-group-item">Node: <span class="text-info">${process.versions.node}</span></li>
+      <li class="list-group-item">Chrome: <span class="text-info">${process.versions.chrome}</span></li>
+      <li class="list-group-item">Electron: <span class="text-info">${process.versions.electron}</span></li>
+      <li class="list-group-item">Http Parser: <span class="text-info">${process.versions.http_parser}</span></li>
+    </ul>
+
+    <h4 class="text-secondary">System Specs</h4>
+    <ul class="list-group">
+      <li class="list-group-item">System Architecture: <span class="text-info">${process.arch}</span></li>
+      <li class="list-group-item">Processor Identifier: <span class="text-info">${process.env.PROCESSOR_IDENTIFIER}</span></li>
+      <li class="list-group-item">Operating System: <span class="text-info">${process.env.OS}</span></li>
+    </ul>
+
+    <h4 class="text-secondary">System Memory</h4>
+    <ul class="list-group">
+      <li class="list-group-item">Total: <span class="text-info">${process.getSystemMemoryInfo().total}</span></li>
+      <li class="list-group-item">Free: <span class="text-info">${process.getSystemMemoryInfo().free}</span></li>
+      <li class="list-group-item">Swap Total: <span class="text-info">${process.getSystemMemoryInfo().swapTotal}</span></li>
+      <li class="list-group-item">Swap Free: <span class="text-info">${process.getSystemMemoryInfo().swapFree}</span></li>
+    </ul>
+
+    <h4 class="text-secondary">Computer Info</h4>
+    <ul class="list-group">
+      <li class="list-group-item">Name: <span class="text-info">${process.env.USERDOMAIN}</span></li>
+      <li class="list-group-item">Username: <span class="text-info">${process.env.USERNAME}</span></li>
+      <li class="list-group-item">Home Path: <span class="text-info">${process.env.HOME}</span></li>
+      <li class="list-group-item">System Drive: <span class="text-info">${process.SYSTEMDRIVE}</span></li>
+      <li class="list-group-item">System Root: <span class="text-info">${process.SYSTEMROOT}</span></li>
+    </ul>
+
+    `;
+    document.getElementById('output').innerHTML = output;
+  </script>
+  <script>
+    require('./renderer.js');
+  </script>
+</html>
