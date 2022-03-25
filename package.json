@@ -9,7 +9,7 @@
   "author": "Omar Abo El Wafa",
   "license": "ISC",
   "dependencies": {
-    "electron": "^8.3.0"
+    "electron": "^13.6.6"
   },
   "devDependencies": {},
   "repository": {
